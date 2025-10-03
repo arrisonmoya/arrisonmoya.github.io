@@ -22,6 +22,12 @@
             margin: 0;
             font-size: 2.5em;
         }
+        .header-image {
+            max-width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px; /* Slightly rounded corners for the header image */
+        }
         nav {
             background-color: #555;
             text-align: center;
@@ -47,14 +53,27 @@
             border-bottom: 2px solid #eee;
             padding-bottom: 20px;
             margin-bottom: 20px;
+            display: flex; /* Use flexbox for image and text alignment */
+            align-items: flex-start; /* Align items to the top */
         }
         .review:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
+        .review-thumbnail {
+            width: 100px; /* Thumbnail size */
+            height: auto;
+            margin-right: 15px; /* Space between image and text */
+            border-radius: 5px; /* Slightly rounded corners for thumbnails */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .review-content {
+            flex-grow: 1; /* Allow content to take remaining space */
+        }
         .review h2 {
             color: #007bff; /* Blue for review titles */
+            margin-top: 0; /* Remove default margin for h2 */
         }
         .rating {
             font-size: 1.2em;
@@ -73,17 +92,18 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative; /* Changed to relative so it doesn't overlap on short content */
             bottom: 0;
             width: 100%;
+            margin-top: 40px; /* Add some space above the footer */
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>🎬 Arrison's Movie Area</h1>
         <p>Honest Opinions. Great Films. Terrible Films. All Reviewed Here.</p>
+        <img src="Gemini_Generated_Image_gqmtg7gqmtg7gqmt (1).png" alt="Film Reel Icon" class="header-image">
     </header>
 
     <nav>
@@ -96,33 +116,45 @@
         <h2>Latest Movie Reviews</h2>
 
         <article class="review">
-            <h2>Oceans 11 (2001)</h2>
-            <span class="author-date">Reviewed by [Arrison Moya] on Septermber 24, 2025</span>
-            <div class="rating">
-                ★★★★★ (5/5 Stars)
+            <img src= "Oceans 11.jpg" alt="Oceans 11 Movie Poster Thumbnail" class="review-thumbnail">
+            <div class="review-content">
+                <h2>Oceans 11 (2001)</h2>
+                <span class="author-date">Reviewed by Arrison Moya on September 24, 2025</span>
+                <div class="rating">
+                    ★★★★★ (5/5 Stars)
+                </div>
+                <p> An amazing crime/comedy film that keeps you engaged throughout the whole film. The perfect combination of humor and captivating crime tactics. Also, stellar cast. George Clooney and Julia Roberts are some of my all time favorite actors.</p>
             </div>
-            <p> An amazing crime/comedy film that keeps you engaged throughout the whole film. The perfect combination of humor and captivating crime tactics. Also, stellar cast 
+        </article>
 
         <article class="review">
-            <h2>Lord of War (2005)</h2>
-            <span class="author-date">Reviewed by Arrison Moya on September 15, 2025</span>
-            <div class="rating">
-                ★★★☆☆ (3/5 Stars)
+            <img src="Lordofwar.jpg" alt="Lord of War Movie Poster Thumbnail" class="review-thumbnail">
+            <div class="review-content">
+                <h2>Lord of War (2005)</h2>
+                <span class="author-date">Reviewed by Arrison Moya on September 15, 2025</span>
+                <div class="rating">
+                    ★★★☆☆ (3/5 Stars)
+                </div>
+                <p>This crime/thriller film was a really fun watch. The plot was fantastic and Nick Cage did not disappoint. The plot at some times was slow and felt a bit predictable, but overall a good watch.</p>
             </div>
-            <p>This crime/thriller film was a really fun watch. The plot was fantistic and Nick Cage did not dissapoint. The plot at some times was slow and felt a bit predicatable, but overall a good watch.
+        </article>
 
         <article class="review">
-            <h2> San Andreas (2015)</h2>
-            <span class="author-date">Reviewed by Arrison Moya on September 5, 2025</span>
-            <div class="rating">
-                ★☆☆☆☆ (1/5 Stars)
+            <img src="San-Andreas.jpg" alt="San Andreas Movie Poster Thumbnail" class="review-thumbnail">
+            <div class="review-content">
+                <h2>San Andreas (2015)</h2>
+                <span class="author-date">Reviewed by Arrison Moya on September 5, 2025</span>
+                <div class="rating">
+                    ★☆☆☆☆ (1/5 Stars)
+                </div>
+                <p>The title promised action; the film delivered confusion and a lot of poor CGI. The idea was there, but the whole movie just felt cheesy in my opinion.</p>
             </div>
-            <p>The title promised action; the film delivered confusion and a lot of poor CGI. The idea was there, but the whole movie just felt cheesy in my opinion.
+        </article>
         
     </div>
 
     <footer>
-        <p>&copy; 2025 Cinephile's Corner | All rights reserved.</p>
+        <p>&copy; 2025 Arrison's Movie Area | All rights reserved.</p>
     </footer>
 
 </body>
